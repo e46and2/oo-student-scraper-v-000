@@ -16,8 +16,10 @@ class Student
     @profile_quote = profile_quote
     @bio = bio
     @profile_url = profile_url
-
-    self.send("name=", name)
+    student_hash.each do |key,value|
+      self.send("#{key}", value)
+    end
+    
 
     @@all << self
   end

@@ -14,6 +14,8 @@ class Student
     @profile_quote = profile_quote
     @bio = bio
     @profile_url = profile_url
+
+    @@all << self 
   end
 
   def self.create_from_collection(students_array)
@@ -25,6 +27,6 @@ class Student
   end
 
   def self.all
-    @@all 
+    @@all
   end
 end

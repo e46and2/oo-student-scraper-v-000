@@ -7,15 +7,7 @@ class Student
   student_hash = {}
 
   def initialize(student_hash)
-    @name = name
-    @location = location
-    @twitter = twitter
-    @linkedin = linkedin
-    @github = github
-    @blog = blog
-    @profile_quote = profile_quote
-    @bio = bio
-    @profile_url = profile_url
+    
     student_hash.each do |key,value|
       self.send("#{key.to_s}=", value)
     end

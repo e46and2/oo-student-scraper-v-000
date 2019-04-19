@@ -17,6 +17,8 @@ class Student
     @bio = bio
     @profile_url = profile_url
 
+    self.send("name=", name)
+
     @@all << self
   end
 

@@ -17,7 +17,7 @@ class Student
     @bio = bio
     @profile_url = profile_url
     student_hash.each do |key,value|
-      self.send("#{key}=", value)
+      self.send("#{key.to_s}=", value)
     end
 
 

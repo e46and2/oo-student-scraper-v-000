@@ -4,6 +4,8 @@ class Student
 
   @@all = []
 
+  student_hash = {}
+
   def initialize(student_hash)
     @name = name
     @location = location
@@ -15,7 +17,7 @@ class Student
     @bio = bio
     @profile_url = profile_url
 
-    @@all << self 
+    @@all << self
   end
 
   def self.create_from_collection(students_array)
